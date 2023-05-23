@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualization</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <style>
+          #Progress_Status {
+            width: 50%;
+            background-color: #ddd;
+          }
+          #myprogressBar {
+            width: 2%;
+            height: 20px;
+            background-color: #4CAF50;
+          }
+          </style>
+        <script>
+            <!-- unload button script-->
+            $(document).ready(function(){
+              $("#unload1").click(function(){
+                $("#upload-file1").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload2").click(function(){
+                $("#upload-file2").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload3").click(function(){
+                $("#upload-file3").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload4").click(function(){
+                $("#upload-file4").val("");
+              });
+            });
+
+            function update() {
+            var element = document.getElementById("myprogressBar");   
+            var width = 1;
+            var identity = setInterval(scene, 3080);
+            function scene() {
+            if (width >= 100) {
+                clearInterval(identity);
+            } else {
+                width++; 
+                element.style.width = width + '%'; 
+                }
+            }
+        }
+        </script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >    
+        
+    </head>
+    <body>
+      <nav class="navbar bg-dark" >
+        <div class="container-fluid"style="background-color:#1e326e;text-align:center;">
+          <a class="navbar-brand" href="\">
+            <img src="/static/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-top">
+           <label style="color:aliceblue">Visualization of Trenching </label>
+          </a>
+        </div>
+      </nav>
+      <div style= " margin-left: 20px; margin-top: 20px;">
+       <form class="form1"  action="index4" method="post" enctype = "multipart/form-data">
+            <!--File 1 upload/unload-->
+            <label>Please upload Excel File 1 </label>
+            <input type="file" name="upload-file1" id="upload-file1" value="">
+            <input type="button" name="unload1" id="unload1" value="Unload-File" > 
+            
+
+            <br>
+            <br> 
+            <!--File 2 upload/unload-->
+            <label>Please upload Excel File 2 </label>
+            <input type="file" name="upload-file2" id="upload-file2" value="">
+            <input type="button" name="unload2" id="unload2" value="Unload-File" > 
+            
+
+            <br>
+            <br> 
+            <!--File 3 upload/unload-->
+            <label>Please upload Excel File 3 </label>
+            <input type="file" name="upload-file3" id="upload-file3" value="">
+            <input type="button" name="unload3" id="unload3" value="Unload-File" > 
+
+            <br>
+            <br> 
+            <!--File 4 upload/unload-->
+            <label>Please upload Excel File 4 </label>
+            <input type="file" name="upload-file4" id="upload-file4" value="">
+            <input type="button" name="unload4" id="unload4" value="Unload-File" > 
+
+
+            <br>
+            <br> 
+            
+            
+            <input type="submit" name="show" value="Show" onclick="update()">
+            <input type="button" value="Refresh" onclick="window.location.reload()">
+        </form>
+        </div>
+        <br>
+        <br>
+        <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div>
+        <br>
+        <br>
+        <div style= "height: 1000px; width: 100%;">
+          <h1>Trenching Visualization Dashboard</h1>
+          <iframe style="height: 100%; display: block;" srcdoc="{{html4}}" width="100%" height="100%"></iframe>
+
+        </div>
+        
+    </body>
+</html>

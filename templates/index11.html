@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualization</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <style>
+          #Progress_Status {
+            width: 50%;
+            background-color: #ddd;
+          }
+          #myprogressBar {
+            width: 2%;
+            height: 20px;
+            background-color: #4CAF50;
+          }
+          </style>
+        <script>
+            <!-- unload button script-->
+            $(document).ready(function(){
+              $("#unload1").click(function(){
+                $("#upload-file1").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload2").click(function(){
+                $("#upload-file2").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload3").click(function(){
+                $("#upload-file3").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload4").click(function(){
+                $("#upload-file4").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload5").click(function(){
+                $("#upload-file5").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload6").click(function(){
+                $("#upload-file6").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload7").click(function(){
+                $("#upload-file7").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload8").click(function(){
+                $("#upload-file8").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload9").click(function(){
+                $("#upload-file9").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload10").click(function(){
+                $("#upload-file10").val("");
+              });
+            });
+            $(document).ready(function(){
+              $("#unload11").click(function(){
+                $("#upload-file11").val("");
+              });
+            });
+            function update() {
+            var element = document.getElementById("myprogressBar");   
+            var width = 1;
+            var identity = setInterval(scene, 7000);
+            function scene() {
+            if (width >= 100) {
+                clearInterval(identity);
+            } else {
+                width++; 
+                element.style.width = width + '%'; 
+                }
+            }
+        }
+            </script>
+         <!-- Required meta tags -->
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    </head>
+    <body>
+      <nav class="navbar bg-dark" >
+        <div class="container-fluid"style="background-color:#1e326e;text-align:center;">
+          <a class="navbar-brand" href="\">
+            <img src="/static/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-top">
+           <label style="color:aliceblue">Visualization of Trenching </label>
+          </a>
+        </div>
+      </nav>
+      <div style= " margin-left: 20px; margin-top: 20px;">
+       <form class="form1"  action="index11" method="post" enctype="multipart/form-data">
+            <!--File 1 upload/unload-->
+            <label>Please upload Excel File 1 </label>
+            <input type="file" name="upload-file1" id="upload-file1" value="">
+            <input type="button" name="unload1" id="unload1" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            <!--File 2 upload/unload-->
+            <label>Please upload Excel File 2 </label>
+            <input type="file" name="upload-file2" id="upload-file2" value="">
+            <input type="button" name="unload2" id="unload2" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            
+            <!--File 3 upload/unload-->
+            <label>Please upload Excel File 3 </label>
+            <input type="file" name="upload-file3" id="upload-file3" value="">
+            <input type="button" name="unload3" id="unload3" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            <!--File 4 upload/unload-->
+            <label>Please upload Excel File 4 </label>
+            <input type="file" name="upload-file4" id="upload-file4" value="">
+            <input type="button" name="unload4" id="unload4" value="Unload-File" > 
+            
+
+            <br>
+            <br> 
+            <!--File 5 upload/unload-->
+            <label>Please upload Excel File 5 </label>
+            <input type="file" name="upload-file5" id="upload-file5" value="">
+            <input type="button" name="unload5" id="unload5" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            <!--File 6 upload/unload-->
+            <label>Please upload Excel File 6 </label>
+            <input type="file" name="upload-file6" id="upload-file6" value="">
+            <input type="button" name="unload6" id="unload6" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            <!--File 7 upload/unload-->
+            <label>Please upload Excel File 7 </label>
+            <input type="file" name="upload-file7" id="upload-file7" value="">
+            <input type="button" name="unload7" id="unload7" value="Unload-File" > 
+            
+            <br>
+            <br> 
+            <!--File 8 upload/unload-->
+            <label>Please upload Excel File 8 </label>
+            <input type="file" name="upload-file8" id="upload-file8" value="">
+            <input type="button" name="unload8" id="unload8" value="Unload-File" > 
+            
+            <br>
+            <br>
+
+            <!--File 9 upload/unload-->
+            <label>Please upload Excel File 9 </label>
+            <input type="file" name="upload-file9" id="upload-file9" value="">
+            <input type="button" name="unload9" id="unload9" value="Unload-File" > 
+            
+
+            <br>
+            <br>
+
+            <!--File 10 upload/unload-->
+            <label>Please upload Excel File 10 </label>
+            <input type="file" name="upload-file10" id="upload-file10" value="">
+            <input type="button" name="unload10" id="unload10" value="Unload-File" > 
+            
+            <br>
+            <br>
+
+            <!--File 11 upload/unload-->
+            <label>Please upload Excel File 11 </label>
+            <input type="file" name="upload-file11" id="upload-file11" value="">
+            <input type="button" name="unload11" id="unload11" value="Unload-File" > 
+            
+            <br><br>
+
+            <input type="submit" name="show" value="Show" onclick="update()">
+            <input type="button" value="Refresh" onclick="window.location.reload()">
+        </form>
+        </div>
+        <br>
+        <br>
+        <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div>
+        <br>
+        <br>
+        <div style= "height: 1000px; width: 100%;">
+          <h1>Trenching Visualization Dashboard</h1>
+          <iframe style="height: 100%; display: block;" srcdoc="{{html11}}" width="100%" height="100%"></iframe>
+
+        </div>
+        
+    </body>
+</html>
